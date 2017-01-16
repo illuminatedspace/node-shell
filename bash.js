@@ -1,11 +1,4 @@
-function my_prompt(){
-
-  //global var in node
-  process
-}
-
-
-console.log(Object.keys(process))
+console.log(process)
 
 process.stdout.write('prompt > ');
 
@@ -13,7 +6,16 @@ process.stdout.write('prompt > ');
 process.stdin.on('data', function (data) {
   var cmd = data.toString().trim(); // remove the newline
 
-  process.stdout.write('You typed: ' + cmd);
+  if (cmd === "pwd") {
+    process.stdout.write(process.env.PWD);
+  }
+  else if (cmd === 'date') {
+    var date = new Date(98, 1);
+    date.setFullYear(2070)
+    process.stdout.write(date.toString());
+  }
+
+ // process.stdout.write('You typed: ' + cmd);
   process.stdout.write('\nprompt > ');
 
 });
