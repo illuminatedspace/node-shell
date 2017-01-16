@@ -1,4 +1,5 @@
   var exports = module.exports = {};
+	var request = require('request');
   var fs = require('fs');
 
   exports.commands = function(cmdArr) {
@@ -24,6 +25,8 @@
   		wc(cmdArr.slice(1));
   	} else if (cmd === 'uniq') {
   		uniq(cmdArr.slice(1));
+  	} else if (cmd === 'curl') {
+  		curl(cmdArr.slice(1));
   	}
 
 
@@ -118,4 +121,13 @@
 			 process.stdout.write(newArr.join("\n"));
 			 done();
 	 });
+ }
+
+ var curl = function(file){
+	 request(file[0], function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log(body) // Show the HTML for the Google homepage.
+			};
+			done();
+		});
  }
