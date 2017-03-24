@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chloehwang/node-shell.git"
->>>>>>> aee840e5047bda78b18a3dc32e5ded234c722093
+aee840e5047bda78b18a3dc32e5ded234c722093
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +18,7 @@
     "url": "https://github.com/chloehwang/node-shell/issues"
   },
   "homepage": "https://github.com/chloehwang/node-shell#readme",
->>>>>>> aee840e5047bda78b18a3dc32e5ded234c722093
+aee840e5047bda78b18a3dc32e5ded234c722093
   "dependencies": {
     "request": "^2.79.0"
   }

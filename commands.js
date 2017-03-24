@@ -8,7 +8,7 @@
     	pwd();
   	}
   	else if (cmd === 'date') {
-  		date();
+  		date()
   	} else if (cmd === 'ls') {
   		ls();
   	} else if (cmd === 'echo') {
